@@ -1,0 +1,11 @@
+.single-story-box{
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    overflow: hidden;
+    border: 5px solid rgb(139, 207, 243);
+}
+
+.story-user-img{
+    height: inherit;
+}
