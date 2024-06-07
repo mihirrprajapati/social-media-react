@@ -30,6 +30,10 @@ body{
   width: fit-content;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
