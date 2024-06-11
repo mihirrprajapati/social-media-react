@@ -4,11 +4,11 @@ import Story from "./Story";
 const Post = () => {
   return (
     <>
-      <div className="p-5">
+      <div className="px-5 py-3">
         <div>
           <Story />
         </div>
-        <div className="d-flex flex-column align-items-center mt-5">
+        <div className="d-flex flex-column align-items-center mt-3">
           <SinglePost />
           <SinglePost />
           <SinglePost />

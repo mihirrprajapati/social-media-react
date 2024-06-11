@@ -1,0 +1,118 @@
+.app-name{
+    color: #ffffff;
+    position: absolute;
+    z-index: 10;
+    top: 35%;
+    left: 35%;
+    font-size: 150px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.app-desc{
+    color: #ffffff;
+    position: absolute;
+    z-index: 10;
+    top: 56%;
+    left: 34%;
+    font-size: 20px;
+}
+
+.custom-input{
+    border: 0;
+    border-bottom: 1px solid grey;
+    width: 100%;
+}
+
+.custom-input:focus{
+    outline: 0;
+}
+
+.login-heading{
+    font-size: 50px;
+}
+
+.login-btn{
+    background-color: #5566ff;
+    color: #ffffff;
+    border: 3px solid #5566ff;
+    font-weight: 600;
+}
+
+.login-btn:hover{
+    background-color: #ffffff;
+    color: #5566ff;
+    border: 3px solid #5566ff;
+}
+
+.new-text-color{
+    color: #5599ff;
+}
+
+.design-card-1{
+    background-color: #3b47b0;
+    width: 100%;
+    height: 170px;
+    position: absolute;
+    border-radius: 40px;
+    top: -120px;
+    rotate: -10deg;
+    z-index: 10;
+}
+
+.design-card-2{
+    background-color: #5566ff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    rotate: 6deg;
+    top: -65px;
+    right: -100px;
+}
+
+.design-card-3{
+    background-color: #5f6fff;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    background-color: #5f6fff;
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    right: -10px;
+    top: -90px;
+    rotate: 8deg;
+    border-radius: 0 0 0 60px;
+}
+
+.design-card-4{
+    background-color: #6675ff;
+    width: 75%;
+    height: 500px;
+    position: absolute;
+    top: 31%;
+    left: 85px;
+    rotate: 6deg;
+}
+
+.design-card-5{
+    background-color: #5599ff;
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    bottom: 0;
+    left: 36px;
+    rotate: -30deg;
+    border-radius: 60px;
+}
+
+.design-card-6{
+    background-color: #5191f2;
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    bottom: -130px;
+    right: -40px;
+    rotate: -50deg;
+    border-radius: 60px;
+}
