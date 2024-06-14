@@ -17,9 +17,9 @@ const LoginSignupPage = () => {
           )}
         </div>
         <div className="col-6 position-relative vh-100 overflow-hidden">
-          <p className="app-name">Ulook</p>
+          <p className="app-name">ULook</p>
           <p className="app-desc">
-            See the World through uLook: Your Social Lens
+            See the World through ULook: Your Social Lens
           </p>
 
           <div className="design-card-1"></div>

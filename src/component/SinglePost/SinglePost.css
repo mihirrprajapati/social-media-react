@@ -14,10 +14,10 @@
 
 .post-date{
     width: fit-content;
-    color: blue;
+    color: #ffffff;
     font-weight: 700;
     font-size: 22px;
-    background: #00f4f7;
+    background: darkslategrey;
     padding: 8px;
     border-radius: 10px;
 }

@@ -4,8 +4,8 @@ import SingleUser from "./SingleUser";
 const SideBar = () => {
   return (
     <>
-      <div className="d-flex flex-column flex-shrink-0 w-100 side-bar-bg vh-100 pt-5 px-2">
-        <div>
+      <div className="d-flex flex-column flex-shrink-0 w-100 side-bar-bg vh-100 px-2">
+        <div className="pt-5" style={{ height: "20%" }}>
           <div className="px-2">
             <h2 className="text-white fs-2">ULook</h2>
             <input
@@ -15,10 +15,29 @@ const SideBar = () => {
             />
           </div>
         </div>
-        <div className="mt-5">
-          <p className="ms-2 fs-5">Friends</p>
+        <div style={{ height: "80%" }}>
+          <p className="ms-2 fs-4">Friends</p>
           <hr />
-          <ul className="mx-4 nav nav-pills flex-column mb-auto">
+          <div className="mx-4 side-bar-scroll">
+            <SingleUser />
+            <SingleUser />
+            <SingleUser />
+            <SingleUser />
+            <SingleUser />
+            <SingleUser />
+            <SingleUser />
+            <SingleUser />
+            <SingleUser />
+            <SingleUser />
+            <SingleUser />
+            <SingleUser />
+            <SingleUser />
+            <SingleUser />
+            <SingleUser />
+            <SingleUser />
+            <SingleUser />
+          </div>
+          {/* <ul className="mx-4 nav nav-pills flex-column mb-auto">
             <li className="nav-item">
               <SingleUser />
             </li>
@@ -34,7 +53,37 @@ const SideBar = () => {
             <li className="nav-item">
               <SingleUser />
             </li>
-          </ul>
+            <li className="nav-item">
+              <SingleUser />
+            </li>
+            <li className="nav-item">
+              <SingleUser />
+            </li>
+            <li className="nav-item">
+              <SingleUser />
+            </li>
+            <li className="nav-item">
+              <SingleUser />
+            </li>
+            <li className="nav-item">
+              <SingleUser />
+            </li>
+            <li className="nav-item">
+              <SingleUser />
+            </li>
+            <li className="nav-item">
+              <SingleUser />
+            </li>
+            <li className="nav-item">
+              <SingleUser />
+            </li>
+            <li className="nav-item">
+              <SingleUser />
+            </li>
+            <li className="nav-item">
+              <SingleUser />
+            </li>
+          </ul> */}
         </div>
       </div>
     </>

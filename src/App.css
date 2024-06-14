@@ -20,6 +20,15 @@ body{
   color: var(--secondary-color);
 }
 
+.side-bar-scroll{
+  height: 90%;
+  overflow-y: scroll;
+}
+
+.user-details{
+  box-shadow: rgba(99, 99, 99, 0.2) -4px 0px 8px 0px;
+}
+
 .input-box
 {
   background-color: var(--secondary-color);
@@ -54,6 +63,7 @@ body{
 
 .single-user-img{
   border: 2px solid var(--secondary-color);
+  object-fit: cover;
 }
 
 ::-webkit-scrollbar {

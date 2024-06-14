@@ -39,6 +39,11 @@
     font-weight: 600;
 }
 
+.input-error{
+    color: red;
+    margin-left: 8px;
+}
+
 .login-btn:hover{
     background-color: #ffffff;
     color: #5566ff;

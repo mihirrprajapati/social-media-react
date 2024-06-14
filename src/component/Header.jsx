@@ -5,24 +5,24 @@ import { IoSettingsOutline } from "react-icons/io5";
 const Header = () => {
   return (
     <>
-      <header className="p-3 mb-3 w-100">
+      <header className="p-3 pb-3 w-100">
         <div className="container">
           <div className="row">
-            <div className="col-10 d-flex justify-content-center">
+            <div className="col-10 d-flex justify-content-center w-100">
               <div className="d-flex header-bg p-3 rounded-4">
                 <div>
-                  <FiHome className="fs-4 mx-3" />
+                  <FiHome className="fs-4 mx-3 cursor-pointer" />
                 </div>
                 <div>
-                  <AiOutlineMessage className="fs-4 mx-3" />
+                  <AiOutlineMessage className="fs-4 mx-3 cursor-pointer" />
                 </div>
                 <div>
-                  <IoSettingsOutline className="fs-4 mx-3" />
+                  <IoSettingsOutline className="fs-4 mx-3 cursor-pointer" />
                 </div>
               </div>
             </div>
 
-            <div className="col-2 dropdown text-end d-flex align-items-center justify-content-end">
+            {/* <div className="col-2 dropdown text-end d-flex align-items-center justify-content-end">
               <a
                 href="#"
                 className="d-block link-body-emphasis text-decoration-none dropdown-toggle"
@@ -62,7 +62,7 @@ const Header = () => {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
           <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-between"></div>
         </div>

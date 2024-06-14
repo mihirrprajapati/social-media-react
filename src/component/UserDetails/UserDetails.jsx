@@ -1,18 +1,19 @@
 import { CiLogout } from "react-icons/ci";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaUserFriends } from "react-icons/fa";
+import "./UserDetails.css";
 
 const UserDetails = () => {
   return (
     <>
-      <div>
+      <div className="mt-5">
         <div className="d-flex align-items-center flex-column">
           <img
             src="https://cdn.pixabay.com/photo/2016/03/23/04/01/woman-1274056_1280.jpg"
             alt=""
             width="120px"
             height="120px"
-            className="rounded-circle"
+            className="rounded-circle user-img"
           />
           <div className="fw-500 mt-2">Alice fdffdgfdg</div>
         </div>

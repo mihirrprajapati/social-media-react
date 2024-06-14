@@ -1,4 +1,4 @@
-import SingleStory from "./SingleStory";
+import SingleStory from "./SingleStory/SingleStory";
 
 const Story = () => {
   return (
