@@ -1,10 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Login from "./Login";
 import "./LoginSignUpPage.css";
 import SignUp from "./SignUp";
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 const LoginSignupPage = () => {
   const [isLogin, setIsLogin] = useState(true);
+
+  const userToken = Cookies.get("userToken");
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (userToken) {
+      navigate("/");
+    }
+  });
 
   return (
     <>

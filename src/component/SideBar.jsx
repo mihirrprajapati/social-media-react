@@ -1,7 +1,10 @@
-import { SlSocialBehance } from "react-icons/sl";
 import SingleUser from "./SingleUser";
+import { useContext } from "react";
+import { MyContext } from "../context/ContextProvider";
 
 const SideBar = () => {
+  const { currentUserData } = useContext(MyContext);
+
   return (
     <>
       <div className="d-flex flex-column flex-shrink-0 w-100 side-bar-bg vh-100 px-2">
@@ -19,71 +22,17 @@ const SideBar = () => {
           <p className="ms-2 fs-4">Friends</p>
           <hr />
           <div className="mx-4 side-bar-scroll">
-            <SingleUser />
-            <SingleUser />
-            <SingleUser />
-            <SingleUser />
-            <SingleUser />
-            <SingleUser />
-            <SingleUser />
-            <SingleUser />
-            <SingleUser />
-            <SingleUser />
-            <SingleUser />
-            <SingleUser />
-            <SingleUser />
-            <SingleUser />
-            <SingleUser />
-            <SingleUser />
-            <SingleUser />
+            {currentUserData.friends &&
+              currentUserData.friends.map((val, key) => {
+                return (
+                  <SingleUser
+                    key={key}
+                    userName={val.userName}
+                    userImg={val.userImg}
+                  />
+                );
+              })}
           </div>
-          {/* <ul className="mx-4 nav nav-pills flex-column mb-auto">
-            <li className="nav-item">
-              <SingleUser />
-            </li>
-            <li className="nav-item">
-              <SingleUser />
-            </li>
-            <li className="nav-item">
-              <SingleUser />
-            </li>
-            <li className="nav-item">
-              <SingleUser />
-            </li>
-            <li className="nav-item">
-              <SingleUser />
-            </li>
-            <li className="nav-item">
-              <SingleUser />
-            </li>
-            <li className="nav-item">
-              <SingleUser />
-            </li>
-            <li className="nav-item">
-              <SingleUser />
-            </li>
-            <li className="nav-item">
-              <SingleUser />
-            </li>
-            <li className="nav-item">
-              <SingleUser />
-            </li>
-            <li className="nav-item">
-              <SingleUser />
-            </li>
-            <li className="nav-item">
-              <SingleUser />
-            </li>
-            <li className="nav-item">
-              <SingleUser />
-            </li>
-            <li className="nav-item">
-              <SingleUser />
-            </li>
-            <li className="nav-item">
-              <SingleUser />
-            </li>
-          </ul> */}
         </div>
       </div>
     </>

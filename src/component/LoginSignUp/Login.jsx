@@ -2,6 +2,7 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import Cookies from "js-cookie";
 
 const initialValues = {
   email: "",
@@ -24,6 +25,7 @@ const Login = ({ setIsLogin }) => {
     initialValues,
     validationSchema: loginValidationSchema,
     onSubmit: (values) => {
+      Cookies.set("userToken", "HHHSSSSEE", { expires: 7 });
       navigate("/");
     },
   });

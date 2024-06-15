@@ -11,6 +11,9 @@
     background-color: #ffffff;
 }
 
+.post-img{
+    object-fit: cover;
+}
 
 .post-date{
     width: fit-content;

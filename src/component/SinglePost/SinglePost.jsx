@@ -5,13 +5,13 @@ import { IoHeartSharp } from "react-icons/io5";
 import { AiFillFire } from "react-icons/ai";
 import { AiOutlineFire } from "react-icons/ai";
 
-const SinglePost = () => {
+const SinglePost = ({ data }) => {
   const [like, setLike] = useState({
-    likeCount: 0,
+    likeCount: data.postLike,
     isLiked: false,
   });
   const [fire, setFire] = useState({
-    fireCount: 0,
+    fireCount: data.postFire,
     isFire: false,
   });
 
@@ -36,9 +36,9 @@ const SinglePost = () => {
       <div className="d-flex my-3 single-post-box row">
         <div className="post-img-box p-0 d-flex rounded-4 col-6">
           <img
-            src="https://cdn.pixabay.com/photo/2018/02/21/08/40/woman-3169726_1280.jpg"
+            src={data.postImg}
             alt=""
-            className="w-100 rounded-4 img-fluid"
+            className="w-100 rounded-4 img-fluid post-img"
           />
         </div>
         <div className="d-flex flex-column justify-content-between p-4 col-6">
@@ -48,24 +48,21 @@ const SinglePost = () => {
                 May <br /> 08
               </div>
               <div className="d-flex flex-column justify-content-around">
-                <div className="fs-5">Lorem ipsum dolor sit amet.</div>
+                <div className="fs-5">{data.postTitle}</div>
                 <div>Thurs 10:00 pm</div>
               </div>
             </div>
-            <div className="mt-3">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Voluptatum, quisquam.
-            </div>
+            <div className="mt-3">{data.postDesc}</div>
             <hr />
             <div className="d-flex align-items-center">
               <img
-                src="https://cdn.pixabay.com/photo/2016/03/23/04/01/woman-1274056_1280.jpg"
+                src={data.userImg}
                 alt=""
                 width="35px"
                 height="35px"
-                className="rounded-circle me-3"
+                className="rounded-circle me-3 post-img"
               />
-              <div className="fw-400">Alice fdffdgfdg</div>
+              <div className="fw-400">{data.userName}</div>
             </div>
           </div>
           <div className="d-flex mt-2 align-items-center justify-content-end">
