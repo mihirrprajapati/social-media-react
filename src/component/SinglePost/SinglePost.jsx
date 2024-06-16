@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./SinglePost.css";
 import { IoHeartOutline } from "react-icons/io5";
 import { IoHeartSharp } from "react-icons/io5";
 import { AiFillFire } from "react-icons/ai";
 import { AiOutlineFire } from "react-icons/ai";
+import { MyContext } from "../../context/ContextProvider";
 
 const SinglePost = ({ data }) => {
+  const { dataArr } = useContext(MyContext);
+
+  const [userDetails, setUserDetails] = useState([]);
+
   const [like, setLike] = useState({
     likeCount: data.postLike,
     isLiked: false,
@@ -30,6 +35,11 @@ const SinglePost = ({ data }) => {
       isFire: !fire.isFire,
     });
   };
+
+  useEffect(() => {
+    const user = dataArr.filter((val) => val.userId === data.userId);
+    setUserDetails(...user);
+  }, [userDetails]);
 
   return (
     <>
@@ -56,13 +66,15 @@ const SinglePost = ({ data }) => {
             <hr />
             <div className="d-flex align-items-center">
               <img
-                src={data.userImg}
+                src={userDetails.userImg && userDetails.userImg}
                 alt=""
                 width="35px"
                 height="35px"
                 className="rounded-circle me-3 post-img"
               />
-              <div className="fw-400">{data.userName}</div>
+              <div className="fw-400">
+                {userDetails.userName && userDetails.userName}
+              </div>
             </div>
           </div>
           <div className="d-flex mt-2 align-items-center justify-content-end">

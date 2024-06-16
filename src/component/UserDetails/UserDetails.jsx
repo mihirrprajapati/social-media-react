@@ -4,7 +4,7 @@ import { FaUserFriends } from "react-icons/fa";
 import Cookies from "js-cookie";
 import "./UserDetails.css";
 import { useNavigate } from "react-router-dom";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { MyContext } from "../../context/ContextProvider";
 
 const UserDetails = () => {
@@ -39,7 +39,7 @@ const UserDetails = () => {
             </div>
             <div className="ms-5 d-flex flex-column align-items-center">
               <div>
-                {currentUserData.friends && currentUserData.friends.length}
+                {currentUserData.friendsId && currentUserData.friendsId.length}
               </div>
               <div>Friends</div>
             </div>

@@ -6,26 +6,20 @@ import { MyContext } from "../context/ContextProvider";
 const Post = () => {
   const { currentUserData, dataArr } = useContext(MyContext);
 
-  const [friendsIdArr, setFriendsIdArr] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);
 
   useEffect(() => {
-    if (currentUserData.friends) {
-      const friendsId = currentUserData.friends.map((val) => val.userId);
-      setFriendsIdArr(friendsId);
-    }
-    console.log(currentUserData.posts);
-  }, [currentUserData]);
-
-  useEffect(() => {
-    if (friendsIdArr.length > 0 && dataArr.length > 0) {
+    if (
+      currentUserData.friendsId &&
+      currentUserData.friendsId.length > 0 &&
+      dataArr.length > 0
+    ) {
       const filtered = dataArr
-        .filter((user) => friendsIdArr.includes(user.userId))
+        .filter((user) => currentUserData.friendsId.includes(user.userId))
         .flatMap((user) => user.posts);
-
       setFilteredPosts(filtered);
     }
-  }, [friendsIdArr, dataArr]);
+  }, [currentUserData.friendsId, dataArr]);
 
   return (
     <>

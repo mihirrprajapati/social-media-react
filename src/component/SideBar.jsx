@@ -22,15 +22,9 @@ const SideBar = () => {
           <p className="ms-2 fs-4">Friends</p>
           <hr />
           <div className="mx-4 side-bar-scroll">
-            {currentUserData.friends &&
-              currentUserData.friends.map((val, key) => {
-                return (
-                  <SingleUser
-                    key={key}
-                    userName={val.userName}
-                    userImg={val.userImg}
-                  />
-                );
+            {currentUserData.friendsId &&
+              currentUserData.friendsId.map((val, key) => {
+                return <SingleUser key={key} userId={val} />;
               })}
           </div>
         </div>
