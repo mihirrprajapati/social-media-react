@@ -1,9 +1,14 @@
+import { useState } from "react";
 import Header from "./Header";
 import Post from "./Post";
 import SideBar from "./SideBar";
 import UserDetails from "./UserDetails/UserDetails";
+import SearchUser from "./SearchUser/SearchUser";
+import UserAccount from "./UserAccount/UserAccount";
 
 const Home = () => {
+  const [currentPage, setCurrentPage] = useState("Home");
+
   return (
     <>
       <div className="container-fluid">
@@ -15,10 +20,12 @@ const Home = () => {
             <div className="row">
               <div className="col-9 h-100">
                 <div style={{ height: "10vh" }}>
-                  <Header />
+                  <Header setCurrentPage={setCurrentPage} />
                 </div>
                 <div style={{ height: "90vh" }}>
-                  <Post />
+                  {currentPage === "Home" && <Post />}
+                  {currentPage === "Search" && <SearchUser />}
+                  {currentPage === "Account" && <UserAccount />}
                 </div>
               </div>
               <div className="col-3 user-details">

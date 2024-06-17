@@ -1,8 +1,12 @@
 import { FiHome } from "react-icons/fi";
-import { AiOutlineMessage } from "react-icons/ai";
-import { IoSettingsOutline } from "react-icons/io5";
+import { IoSearchSharp } from "react-icons/io5";
+import { FaRegUser } from "react-icons/fa";
 
-const Header = () => {
+const Header = ({ setCurrentPage }) => {
+  const changePage = (val) => {
+    setCurrentPage(val);
+  };
+
   return (
     <>
       <header className="p-3 pb-3 w-100">
@@ -11,13 +15,22 @@ const Header = () => {
             <div className="col-10 d-flex justify-content-center w-100">
               <div className="d-flex header-bg p-3 rounded-4">
                 <div>
-                  <FiHome className="fs-4 mx-3 cursor-pointer" />
+                  <FiHome
+                    className="fs-4 mx-3 cursor-pointer"
+                    onClick={() => changePage("Home")}
+                  />
                 </div>
                 <div>
-                  <AiOutlineMessage className="fs-4 mx-3 cursor-pointer" />
+                  <IoSearchSharp
+                    className="fs-4 mx-3 cursor-pointer"
+                    onClick={() => changePage("Search")}
+                  />
                 </div>
                 <div>
-                  <IoSettingsOutline className="fs-4 mx-3 cursor-pointer" />
+                  <FaRegUser
+                    className="fs-5 mx-3 cursor-pointer"
+                    onClick={() => changePage("Account")}
+                  />
                 </div>
               </div>
             </div>

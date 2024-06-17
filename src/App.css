@@ -66,6 +66,10 @@ body{
   object-fit: cover;
 }
 
+.object-fit-cover{
+  object-fit: cover;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;

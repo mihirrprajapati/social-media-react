@@ -1,0 +1,8 @@
+.single-search-user-box{
+    background: linear-gradient(90deg, rgba(95,111,255,1) 0%, rgba(85,153,255,1) 35%, rgba(81,145,242,1) 100%);
+}
+
+.add-user{
+    right: 10px;
+    top: 10px;
+}
