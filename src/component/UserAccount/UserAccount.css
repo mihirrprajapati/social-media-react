@@ -17,3 +17,8 @@
 .post-image:hover + .like-fire-details{
     opacity: 1;
 }
+
+.back-arrow{
+    position: relative;
+    top: 25px;
+}

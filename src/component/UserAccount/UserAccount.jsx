@@ -1,8 +1,9 @@
-import { IoHeartOutline } from "react-icons/io5";
-import "./UserAccount.css";
-import { AiOutlineFire } from "react-icons/ai";
 import { useContext, useState } from "react";
 import { MyContext } from "../../context/ContextProvider";
+import { IoHeartOutline } from "react-icons/io5";
+import { AiOutlineFire } from "react-icons/ai";
+import { IoMdArrowRoundBack } from "react-icons/io";
+import "./UserAccount.css";
 
 const UserAccount = () => {
   const { currentUserData } = useContext(MyContext);
@@ -75,15 +76,23 @@ const UserAccount = () => {
             <div>
               <div
                 onClick={() => setAllPosts({ status: true })}
-                className="cursor-pointer"
+                className="cursor-pointer ms-5 back-arrow"
               >
-                Back
+                <IoMdArrowRoundBack className="fs-3" />
               </div>
-              <div>
-                <img src={allPosts.postImg} alt="" width="80%" />
-                <div>{allPosts.postTitle}</div>
-                <div>{allPosts.postLike}</div>
-                <div>{allPosts.postFire}</div>
+              <div className="d-flex flex-column align-items-center">
+                <img src={allPosts.postImg} alt="" width="70%" />
+                <div className="w-100 d-flex justify-content-around mt-3">
+                  <div className="fs-4">{allPosts.postTitle}</div>
+                  <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center fs-5 me-3">
+                      <IoHeartOutline /> <div>{allPosts.postLike}</div>
+                    </div>
+                    <div className="d-flex align-items-center fs-5">
+                      <AiOutlineFire /> <div>{allPosts.postFire}</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           )}

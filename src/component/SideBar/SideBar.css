@@ -1,0 +1,16 @@
+.side-bar-logo{
+    height: 20%;
+    min-height: 170px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .side-bar-scroll{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side-bar-logo{
+        height: 10%;
+    }
+}

@@ -23,8 +23,8 @@ const Post = () => {
 
   return (
     <>
-      <div className="px-5 py-3">
-        <div style={{ height: "11vh" }}>
+      <div className="px-2 px-sm-2 px-md-4 px-lg-5 py-3">
+        <div>
           <Story />
         </div>
         <div

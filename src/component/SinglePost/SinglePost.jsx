@@ -44,14 +44,14 @@ const SinglePost = ({ data }) => {
   return (
     <>
       <div className="d-flex my-3 single-post-box row">
-        <div className="post-img-box p-0 d-flex rounded-4 col-6">
+        <div className="post-img-box p-0 d-flex rounded-4 col-12 col-lg-7">
           <img
             src={data.postImg}
             alt=""
             className="w-100 rounded-4 img-fluid post-img"
           />
         </div>
-        <div className="d-flex flex-column justify-content-between p-4 col-6">
+        <div className="d-flex flex-column justify-content-between p-4 col-12 col-lg-5">
           <div>
             <div className="d-flex">
               <div className="post-date me-2">
