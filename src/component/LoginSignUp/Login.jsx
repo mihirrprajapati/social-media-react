@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import Cookies from "js-cookie";
+import { useContext, useEffect } from "react";
+import { MyContext } from "../../context/ContextProvider";
 
 const initialValues = {
   email: "",
@@ -10,6 +12,12 @@ const initialValues = {
 };
 
 const Login = ({ setIsLogin }) => {
+  const { dataArr, setCurrentUserId, currentUserId } = useContext(MyContext);
+
+  useEffect(() => {
+    console.log(currentUserId);
+  }, [currentUserId]);
+
   const loginValidationSchema = Yup.object().shape({
     email: Yup.string()
       .email("Please Enter valid Email")
@@ -24,9 +32,23 @@ const Login = ({ setIsLogin }) => {
   const formik = useFormik({
     initialValues,
     validationSchema: loginValidationSchema,
-    onSubmit: (values) => {
-      Cookies.set("userToken", "HHHSSSSEE", { expires: 7 });
-      navigate("/");
+    onSubmit: (values, error) => {
+      const isEmailPresent = dataArr.filter(
+        (val) => val.userEmail == values.email
+      );
+
+      if (isEmailPresent.length > 0) {
+        if (isEmailPresent[0].userPassword == values.pass) {
+          console.log(isEmailPresent);
+          setCurrentUserId(isEmailPresent[0].userId);
+          // Cookies.set("userToken", "HHHSSSSEE", { expires: 7 });
+          navigate("/");
+        } else {
+          error.setErrors({ email: "", pass: "Invalid Password" });
+        }
+      } else {
+        error.setErrors({ email: "Invalid Email", pass: "Invalid Password" });
+      }
     },
   });
 

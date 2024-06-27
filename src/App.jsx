@@ -10,7 +10,8 @@ import Cookies from "js-cookie";
 import "./App.css";
 
 const App = () => {
-  const userToken = Cookies.get("userToken");
+  // const userToken = Cookies.get("userToken");
+  const userToken = true;
 
   return (
     <>
