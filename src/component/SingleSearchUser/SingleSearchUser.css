@@ -6,3 +6,15 @@
     right: 10px;
     top: 10px;
 }
+
+.search-user-img{
+    width: 80px;
+    height: 80px;
+}
+
+@media (max-width: 768px) {
+    .search-user-img{
+        width: 60px;
+        height: 60px;
+    }   
+}

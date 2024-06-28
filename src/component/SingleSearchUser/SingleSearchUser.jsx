@@ -8,9 +8,7 @@ const SingleSearchUser = ({ userName, userImg }) => {
         <img
           src={userImg}
           alt=""
-          width="80px"
-          height="80px"
-          className="rounded-circle me-3 single-user-img"
+          className="rounded-circle me-3 single-user-img search-user-img"
         />
         <div className="text-white fs-4">{userName}</div>
         <div className="position-absolute add-user">

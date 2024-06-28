@@ -4,10 +4,11 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import Home from "./component/Home";
+
 import LoginSignupPage from "./component/LoginSignUp/LoginSignUpPage";
 import Cookies from "js-cookie";
 import "./App.css";
+import Home from "./component/Home/Home";
 
 const App = () => {
   // const userToken = Cookies.get("userToken");

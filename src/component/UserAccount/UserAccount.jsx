@@ -12,7 +12,7 @@ const UserAccount = () => {
 
   return (
     <>
-      <div className="mx-5 mt-4">
+      <div className="mx-3 mx-sm-5 mt-4">
         <div className="d-flex">
           <div>
             <img
@@ -41,7 +41,10 @@ const UserAccount = () => {
             <div className="row">
               {currentUserData.posts.map((val, key) => {
                 return (
-                  <div className="col-4 mt-4 position-relative" key={key}>
+                  <div
+                    className="col-12 col-sm-6 col-md-6 col-lg-4 px-4 px-sm-2 mt-4 position-relative"
+                    key={key}
+                  >
                     <img
                       src={val.postImg}
                       alt=""

@@ -1,0 +1,22 @@
+.side-bar{
+    display: none;
+}
+
+@media (max-width: 576px) {
+
+    .cross-icon{ 
+        position: absolute;
+        top: 32px;
+        right: 32px;
+    }
+
+    .hum-burger-icon{
+        position: absolute;
+        top: 28px;
+        left: 28px;
+    }
+
+    .show-sidebar{
+        display: block;
+    }
+}

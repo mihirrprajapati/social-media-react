@@ -17,10 +17,10 @@ const SearchUser = () => {
             placeholder="search user..."
           />
         </div>
-        <div className="row mx-5 user-box">
+        <div className="row mx-3 mx-sm-5 user-box">
           {dataArr.map((user, key) => {
             return (
-              <div className="col-6" key={key}>
+              <div className="col-12 col-sm-6" key={key}>
                 <SingleSearchUser
                   userName={user.userName}
                   userImg={user.userImg}
