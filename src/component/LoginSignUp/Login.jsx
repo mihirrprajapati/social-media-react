@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import Cookies from "js-cookie";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { MyContext } from "../../context/ContextProvider";
 
 const initialValues = {
@@ -12,11 +12,7 @@ const initialValues = {
 };
 
 const Login = ({ setIsLogin }) => {
-  const { dataArr, setCurrentUserId, currentUserId } = useContext(MyContext);
-
-  useEffect(() => {
-    console.log(currentUserId);
-  }, [currentUserId]);
+  const { dataArr, setCurrentUserId } = useContext(MyContext);
 
   const loginValidationSchema = Yup.object().shape({
     email: Yup.string()
@@ -39,9 +35,8 @@ const Login = ({ setIsLogin }) => {
 
       if (isEmailPresent.length > 0) {
         if (isEmailPresent[0].userPassword == values.pass) {
-          console.log(isEmailPresent);
+          Cookies.set("user-id", isEmailPresent[0].userId);
           setCurrentUserId(isEmailPresent[0].userId);
-          // Cookies.set("userToken", "HHHSSSSEE", { expires: 7 });
           navigate("/");
         } else {
           error.setErrors({ email: "", pass: "Invalid Password" });

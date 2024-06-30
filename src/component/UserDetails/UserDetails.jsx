@@ -13,7 +13,7 @@ const UserDetails = () => {
   const navigate = useNavigate();
 
   const logout = () => {
-    Cookies.remove("userToken");
+    Cookies.remove("user-id");
     navigate("/login");
   };
 
